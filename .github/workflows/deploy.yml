@@ -3,7 +3,7 @@ name: Deploy para GitHub Pages
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # Permite rodar manualmente pelo botão no GitHub
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -41,7 +41,7 @@ jobs:
           enablement: true
 
       - name: Enviar pasta dist para o Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './dist'
 
